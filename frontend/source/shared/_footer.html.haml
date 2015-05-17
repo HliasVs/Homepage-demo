@@ -1,0 +1,53 @@
+.site-footer
+  %footer
+    .socials
+      %section
+        %h2 SOCIAL
+        %p= lorem.sentence
+        .social-links
+          - ['instagram','facebook','twitter','googleplus','pinterest','youtube'].each do |social|
+            %a{ href: '/' }
+              #{social}
+              %i{ class: "icon icon-#{social}" }
+
+    .footer-top-row.row-table
+      .row-cell.footer-nav
+        .footer-nav-option
+          %a{ href: '/' }
+            %h5 Footer heading
+          %ul
+            - ['Lorem','Dolor','Amet','Sit','Quae','Anderast'].each do |footerNavOption|
+              %li
+                %a{ href: '/' } #{footerNavOption}
+
+        .footer-nav-option
+          %a{ href: '/' }
+            %h5 Footer heading
+          %ul
+            - ['Dolor','Amet','Lorem','Sit','Anderast','Quae'].each do |footerNavOption|
+              %li
+                %a{ href: '/' } #{footerNavOption}
+
+        .footer-nav-option
+          %a{ href: '/' }
+            %h5 Footer heading
+          %ul
+            - ['Amet','Sit','Lorem','Dolor','Quae','Anderast'].each do |footerNavOption|
+              %li
+                %a{ href: '/' } #{footerNavOption}
+
+      .row-cell
+        .footer-right-box
+          .newsletter_wrapper
+            %h4 NEWSLETTER
+
+            .form-wrapper
+              %form
+                %input{ type: 'text', placeholder: 'email' }
+                %button{ type: 'submit' } REGISTER
+
+          = partial 'shared/coupon_form'
+
+    .footer-bottom-row.row-table
+      .row-cell.copyright
+        %p Copyright © 2015 Demo

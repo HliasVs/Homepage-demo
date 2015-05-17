@@ -1,0 +1,175 @@
+.site-header
+  %header
+    .header-top-row
+      .row-table
+        .row-cell.head-first-cell
+          .free-shipping.for-table
+            .row-cell
+              %figure
+                = image_tag('icons/flag_greece.png', alt: 'shipping info', title: 'shipping info', width: '35', height: '24')
+
+            .row-cell
+              %p
+                free shipping
+                %br
+                for Greece
+
+        .row-cell
+          .free-order-info.for-table
+            .row-cell
+              %i.icon.icon-phone-orders
+
+            .row-cell
+              %p
+                FREE ORDER PHONE
+                %a{ href: 'tel:2105555555', target: '_blank' } 2105555555
+
+        .row-cell.top-row-options
+          %a{ href: '/' }= lorem.word
+          %a{ href: '/' }= lorem.word
+          %a{ href: '/' }= lorem.word
+
+    .header-middle-row
+      .row-table
+        .row-cell.head-first-cell
+          %a{ href: '/', class: 'logo' }
+            %h1 Demo
+            %figure
+              = image_tag('http://place-hold.it/173x85/5787c7&text=Logo', width: '173', height: '85', alt: 'Demo', title: 'Demo')
+
+        .row-cell
+          .search-wrapper
+            %form{ id: 'text_search', name: 'query', autocomplete: 'off' }
+              %input{ type: 'text', placeholder: 'search' }
+              %button{ type: 'submit' } submit
+
+        .row-cell
+          .mini-cart-top-info
+            %a{ href: '/', class: 'mini-cart-top-link' }
+              .for-table
+                .row-cell
+                  .number-icon
+                    %b 2
+
+                .row-cell
+                  %p
+                    Cart
+                    %br
+                    Total:
+                    %strong 39€
+
+            .mini-cart
+              .mini-cart-products.scrollable-list
+                %ul
+                  -5.times do
+                    %li
+                      .row-product
+                        .image-content
+                          %a{ href: '/' }
+                            %figure
+                              = image_tag('http:http://place-hold.it/108/e4d31c', width: '108', height: '108', alt: 'Product', title: 'Product')
+
+                        .text-content
+                          %a{ href: '/' }
+                            %h3= lorem.word
+                          .prices
+                            %s.deleted-price 79,00€
+                            %strong.current-price 44,00€
+                          %p Size: L
+                          %p Color: Black
+                          %p Quantity: 1
+
+                        %div
+                          %a{ href: '/', class: 'remove-btn' } X
+
+              .mini-cart-bottom-options
+                %a{ href: '/' }
+                  %strong PROCEED TO CHECKOUT
+
+    .header-bottom-row
+      .main-nav
+        .row-table
+          .row-cell
+            .nav-catalog
+              .catalog-top-option
+                %a{ href: '/' }
+                  %span.burger-icon
+                    %span -
+                    %span -
+                    %span -
+
+                  %strong CATALOG
+
+              .submenu
+                %ul
+                  %li.submenu-item
+                    %a{ href: '/' }
+                      %h4 Submenu heading
+
+                    %ul
+                      - ['Lorem','Ipsum','Dolor','Sit','Amet','Apre','Doloribus'].each do |submenuItem|
+                        %li
+                          %a{ href: '/' } #{submenuItem}
+
+                    .submenu-last-options
+                      %a{ href: '/' }
+                        %em Last options
+
+                    .submenu-banner
+                      %a{ href: '/' }
+                        %p
+                          %strong Banner title
+                        %figure
+                          = image_tag('http://place-hold.it/270x156/efae00&text=Submenu%20banner', width: '270', height: '156', alt: 'Submenu banner', title: 'Submenu banner')
+
+                  %li.submenu-item
+                    %a{ href: '/' }
+                      %h4 Submenu heading
+
+                    %ul
+                      - ['Dolor','Sit','Lorem','Ipsum','Amet','Doloribus','Apre'].each do |submenuItem|
+                        %li
+                          %a{ href: '/' } #{submenuItem}
+
+                    .submenu-last-options
+                      %a{ href: '/' }
+                        %em Last options
+
+                    .submenu-banner
+                      %a{ href: '/' }
+                        %p
+                          %strong Banner title
+                        %figure
+                          = image_tag('http://place-hold.it/270x156/efae00&text=Submenu%20banner', width: '270', height: '156', alt: 'Submenu banner', title: 'Submenu banner')
+
+                  %li.submenu-item
+                    %a{ href: '/' }
+                      %h4 Submenu heading
+
+                    %ul
+                      - ['Doloribus','Apre','Ipsum','Dolor','Sit','Amet','Lorem'].each do |submenuItem|
+                        %li
+                          %a{ href: '/' } #{submenuItem}
+
+                    .submenu-last-options
+                      %a{ href: '/' }
+                        %em Last options
+
+                    .submenu-banner
+                      %a{ href: '/' }
+                        %p
+                          %strong Banner title
+                        %figure
+                          = image_tag('http://place-hold.it/270x156/efae00&text=Submenu%20banner', width: '270', height: '156', alt: 'Submenu banner', title: 'Submenu banner')
+
+            .nav-offers
+              %a{ href: '/' }
+                %strong OFFERS
+
+          .row-cell
+            %nav
+              %ul
+                - ['BLOG','CONTACT'].each do |navItem|
+                  %li
+                    %a{ href: '/' }
+                      %b #{navItem}

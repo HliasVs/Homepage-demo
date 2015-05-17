@@ -1,0 +1,82 @@
+#home-slider
+  .slider-list
+    %span.prev <
+    %span.next >
+
+    %ul
+      - ['http://place-hold.it/950x470/fb8dc4&text=Slide%20banner','http://place-hold.it/950x470/5787c7&text=Slide%20banner','http://place-hold.it/950x470/efae00&text=Slide%20banner','http://place-hold.it/950x470/9ebc36&text=Slide%20banner','http://place-hold.it/950x470/5787c7&text=Slide%20banner'].each do |slideBanner|
+        %li{ style: "background-image:url(#{slideBanner})" }
+          %a{ href: '/' }
+
+  .bullet-navigation
+
+.main-content
+  = partial 'shared/general_info'
+
+  .home-content
+    .banners-wrapper
+      .for-table
+        .row-cell
+          .banner-content
+            %a{ href: '/' }
+              %figure
+                = image_tag('http://place-hold.it/230x600/9ebc36&text=Banner', width: '230', height: '600', alt: 'Banner', title: 'Banner')
+
+        .row-cell
+          .banner-content
+            %a{ href: '/' }
+              %figure
+                = image_tag('http://place-hold.it/470x600/5787c7&text=Banner', width: '470', height: '600', alt: 'Banner', title: 'Banner')
+
+        .row-cell
+          .banner-content
+            %a{ href: '/' }
+              %figure
+                = image_tag('http://place-hold.it/230x294/fb8dc4&text=Banner', width: '230', height: '294', alt: 'Banner', title: 'Banner')
+
+          .banner-content
+            %a{ href: '/' }
+              %figure
+                = image_tag('http://place-hold.it/230x294/efae00&text=Banner', width: '230', height: '294', alt: 'Banner', title: 'Banner')
+
+    .best-sellers
+      %section
+        %h2 Section title
+
+        .listed-products.matchHeighted
+          - 8.times do
+            = partial 'shared/small_product'
+
+    .banners-wrapper
+      .for-table
+        - ['http://place-hold.it/310x430/efae00&text=Banner','http://place-hold.it/310x430/9ebc36&text=Banner','http://place-hold.it/310x430/5787c7&text=Banner'].each do |bannerContent|
+          .row-cell
+            .banner-content
+              %a{ href: '/' }
+                %figure
+                  = image_tag("#{bannerContent}", width: '310', height: '430', alt: 'Banner', title: 'Banner')
+
+    .home-gallery
+      %section
+        %h2 Section title
+
+        .gallery-list
+          %span.prev <
+          %span.next >
+
+          %ul.for-carousel{ data: { 'prev'=> '.gallery-list .prev', 'next'=> '.gallery-list .next', 'auto'=> 'false' } }
+            -3.times do
+              %li
+                - 2.times do
+                  - ['http://place-hold.it/230x230/5787c7&text=Banner','http://place-hold.it/230x230/efae00&text=Banner','http://place-hold.it/230x230/9ebc36&text=Banner','http://place-hold.it/230x230/5787c7&text=Banner'].each do |contentBanner|
+                    %a{ href: '/' }
+                      %figure
+                        = image_tag("#{contentBanner}", width: '230', height: '230', alt: 'Banner', title: 'Banner')
+
+    .latest-articles
+      %section
+        %h2 Section title
+
+        .listed-articles.matchHeighted
+          - 2.times do
+            = partial 'shared/small_article'

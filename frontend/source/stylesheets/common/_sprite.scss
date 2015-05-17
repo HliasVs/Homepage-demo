@@ -1,0 +1,84 @@
+.icon { @extend %icon; }
+
+%icon {
+  font-size: 0;
+  text-indent: -9999px;
+  display: inline-block;
+  vertical-align: middle;
+  background: {
+    image: image-url('icons/sprite.png');
+    repeat: no-repeat;
+  }
+}
+
+.icon-instagram {
+  width: 43px;
+  height: 43px;
+  background-position: -8px -9px;
+}
+
+.icon-facebook {
+  width: 20px;
+  height: 42px;
+  background-position: -80px -9px;
+}
+
+.icon-twitter {
+  width: 42px;
+  height: 35px;
+  background-position: -129px -13px;
+}
+
+.icon-googleplus {
+  width: 44px;
+  height: 39px;
+  background-position: -188px -11px;
+}
+
+.icon-pinterest {
+  width: 34px;
+  height: 44px;
+  background-position: -253px -8px;
+}
+
+.icon-youtube {
+  width: 42px;
+  height: 42px;
+  background-position: -309px -9px;
+}
+
+.icon-phone-orders {
+  width: 34px;
+  height: 34px;
+  background-position: -13px -73px;
+}
+
+.icon-track {
+  width: 34px;
+  height: 32px;
+  background-position: -13px -134px;
+}
+
+.icon-clock {
+  width: 59px;
+  height: 33px;
+  background-position: -360px -73px;
+}
+
+.icon-gift {
+  width: 34px;
+  height: 34px;
+  background-position: -433px -73px;
+}
+
+.icon-put-at-cart {
+  width: 18px;
+  height: 20px;
+  background-position: -81px -140px;
+}
+
+.icon-put-at-wishlist {
+  width: 19px;
+  height: 17px;
+  background-position: -140px -141px;
+}

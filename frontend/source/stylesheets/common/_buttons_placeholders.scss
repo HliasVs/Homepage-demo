@@ -1,0 +1,70 @@
+%petrol-btn {
+  color: $wh;
+  text-align: center;
+  padding: 16px 10px;
+  background-color: $petrol;
+  font: {
+    weight: 700;
+    size: 0.84em;
+  }
+
+  * {
+    display: table-cell;
+    vertical-align: middle;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+  }
+
+  &:hover { background-color: lighten($petrol,10); }
+}
+
+.remove-btn {
+  width: 9px;
+  height: 9px;
+  font-size: 0;
+  display: inline-block;
+  vertical-align: middle;
+  background: {
+    image: image-url('icons/sprite.png');
+    position: -146px -85px;
+  }
+}
+
+.row-table,
+%row-table,
+.for-table,
+%for-table { display: table; }
+
+.row-table,
+%row-table { width: 100%; }
+
+.row-cell {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 10px;
+
+  &:last-child { padding-right: 0; }
+}
+
+%reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%for-img {
+  overflow: hidden;
+  position: relative;
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+  }
+}

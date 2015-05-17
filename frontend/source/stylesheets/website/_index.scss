@@ -1,0 +1,169 @@
+.slider-list {
+  height: 470px;
+  overflow: hidden;
+  position: relative;
+
+  ul {
+    @extend %reset-list;
+    width: 100%;
+    height: 470px;
+  }
+
+  li {
+    float: left;
+    width: 950px;
+    height: inherit;
+    position: relative;
+    background: {
+      size: 100% auto;
+      position: center top;
+      repeat: no-repeat;
+    }
+  }
+
+  a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    top: 40%;
+    top: calc(( 100% - 40px ) / 2);
+    z-index: 1;
+    width: 24px;
+    height: 40px;
+    text-indent: -9999px;
+    cursor: pointer;
+    background: {
+      image: image-url('icons/sprite.png');
+      repeat: no-repeat;
+    }
+
+    &:hover { opacity: 0.6; }
+  }
+
+  .prev {
+    left: 50%;
+    margin-left: -460px;
+    background-position: -258px -70px;
+  }
+
+  .next {
+    right: 50%;
+    margin-right: -460px;
+    background-position: -318px -70px;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(64,64,64,0.64);
+    width: 100%;
+  }
+
+  &:before {
+    left: 50%;
+    margin-left: 475px;
+  }
+
+  &:after {
+    right: 50%;
+    margin-right: 475px;
+  }
+}
+
+.bullet-navigation {
+  text-align: center;
+
+  a {
+    width: 13px;
+    height: 13px;
+    margin: 0 3px;
+    border-radius: 50%;
+    text-indent: -9999px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #f26d8c;
+
+    &:hover,
+    &.selected { background-color: #999b9f; }
+  }
+}
+
+.home-content > * { margin-top: 64px; }
+
+.gallery-list {
+  position: relative;
+
+  ul {
+    @extend %reset-list;
+    overflow: hidden;
+  }
+
+  li {
+    float: left;
+    font-size: 0;
+    width: 950px;
+  }
+
+  a {
+    width: 230px;
+    height: 230px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px 0 5px 10px;
+
+    &:nth-child(4n+1) { margin-left: 0; }
+  }
+
+  figure {
+    width: inherit;
+    height: inherit;
+    @extend %for-img;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+    top: calc(( 100% - 52px ) / 2);
+    background-color: $wh;
+    border: solid 3px $bl;
+    overflow: hidden;
+    width: 52px;
+    height: 52px;
+    text-align: center;
+    line-height: 48px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    text-indent: -9999px;
+    cursor: pointer;
+    @include transition(0.4s);
+    background: {
+      image: image-url('icons/sprite.png');
+      repeat: no-repeat;
+    }
+
+    &:hover { background-color: darken($wh,10); }
+  }
+
+  .prev {
+    left: -12px;
+    background-position: -368px -8px;
+  }
+
+  .next {
+    right: -12px;
+    background-position: -426px -8px;
+  }
+}

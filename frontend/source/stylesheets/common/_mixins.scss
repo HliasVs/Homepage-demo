@@ -1,0 +1,96 @@
+@mixin placeholder($setcolor, $setsize, $setstyle:normal) {
+  ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    $setcolor;
+    opacity: 1;
+    font: {
+      size: $setsize;
+      style: $setstyle;
+    }
+  }
+
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    $setcolor;
+    opacity: 1;
+    font: {
+      size: $setsize;
+      style: $setstyle;
+    }
+  }
+
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    $setcolor;
+    opacity: 1;
+    font: {
+      size: $setsize;
+      style: $setstyle;
+    }
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    $setcolor;
+    opacity: 1;
+    font: {
+      size: $setsize;
+      style: $setstyle;
+    }
+  }
+}
+
+@mixin transition-none {
+  -webkit-transition: none;
+          transition: none;
+}
+
+@mixin transition($time) {
+  -webkit-transition: all $time;
+          transition: all $time;
+}
+
+@mixin translate($x,$y) {
+  -webkit-transform: translate($x,$y);
+      -ms-transform: translate($x,$y);
+          transform: translate($x,$y);
+}
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+      -ms-transform: rotate($deg);
+          transform: rotate($deg);
+}
+
+@mixin rotateY($deg) {
+  -webkit-transform: rotateY($deg);
+          transform: rotateY($deg);
+}
+
+@mixin scale($x:0, $y:0) {
+  -webkit-transform: scale($x,$y);
+      -ms-transform: scale($x,$y);
+          transform: scale($x,$y);
+}
+
+@mixin skew($x:0, $y:0) {
+  -webkit-transform: skew($x,$y);
+      -ms-transform: skew($x,$y);
+          transform: skew($x,$y);
+}
+
+@mixin bg-opacity($color, $opacity: 0.3) {
+  background: $color;
+  background: rgba($color, $opacity);
+}
+
+@mixin grad($top,$bottom) {
+  background-color: $top;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($top), to($bottom)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $top, $bottom); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:  -moz-linear-gradient(top, $top, $bottom); /* FF3.6 */
+  background-image:   -ms-linear-gradient(top, $top, $bottom); /* IE10 */
+  background-image:    -o-linear-gradient(top, $top, $bottom); /* Opera 11.10+ */
+  background-image:     linear-gradient(to bottom, $top, $bottom);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$top', endColorstr='$bottom');
+}
+
+@function em($px) {
+  @return ($px / $base-font-size) * 1em;
+}

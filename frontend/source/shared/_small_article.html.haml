@@ -1,0 +1,19 @@
+.small-article
+  %article
+    .article-date-badge
+      %p
+        %b 15
+        APR
+
+    .article-image
+      %a{ href: '/' }
+        %figure
+          = image_tag('http://place-hold.it/390x360/fb8dc4&text=Article%20banner', width: '390', height: '360', alt: 'Article', title: 'Article')
+
+    .article-text
+      .article-top-info
+        %a{ href: '/' }
+          %h3 Article title
+        %p
+          %i= lorem.words 2
+      %p= lorem.sentence
